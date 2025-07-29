@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f5dc; /* amarillo claro */
@@ -11,13 +15,21 @@ h1 {
   margin-bottom: 30px;
 }
 
+#curriculum {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .year {
   display: flex;
   flex-direction: row;
-  margin-bottom: 40px;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #fff8dc;
   border-radius: 10px;
   padding: 15px;
-  background-color: #f5f5dc; /* amarillo claro */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .semester {
@@ -39,6 +51,10 @@ h1 {
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-size: 14px;
+}
+
+.subject:hover {
+  background-color: #ffb3c0;
 }
 
 .subject.locked {
