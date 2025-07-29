@@ -1,82 +1,53 @@
 body {
-  background-color: #F9F6E1;
   font-family: Arial, sans-serif;
-  padding: 20px;
+  background-color: #f5f5dc; /* amarillo claro */
   margin: 0;
+  padding: 20px;
 }
 
 h1 {
+  color: #a28abf; /* morado suave */
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
-#malla {
+.year {
   display: flex;
   flex-direction: row;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-}
-
-.anio {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  background-color: #FFFDEB;
-  border-radius: 12px;
-  padding: 15px;
-  width: 260px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-.semestre {
-  background-color: #FFF;
-  padding: 10px;
+  margin-bottom: 40px;
   border-radius: 10px;
-  border: 1px solid #eee;
+  padding: 15px;
+  background-color: #f5f5dc; /* amarillo claro */
 }
 
-.semestre h3 {
+.semester {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.semester h2 {
   text-align: center;
+  color: #555;
   margin-bottom: 10px;
 }
 
-.curso {
-  background-color: #FAC7D0;
-  border: none;
-  margin: 6px 0;
+.subject {
+  background-color: #ffc4cd; /* rosa */
   padding: 10px;
+  margin: 6px 0;
   border-radius: 8px;
-  width: 100%;
-  text-align: center;
-  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
 }
 
-.curso:hover {
-  background-color: #F9B7C6;
-}
-
-.curso.aprobado {
-  background-color: #C6DB9C;
-  color: #444;
-}
-
-.curso.aprobado:hover {
-  background-color: #D7E7B7;
-}
-
-.curso:disabled {
-  background-color: #e0e0e0;
-  color: #999;
+.subject.locked {
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
-button {
-  display: block;
-  margin: 30px auto;
-  padding: 10px 20px;
-  font-size: 16px;
+.subject.completed {
+  background-color: #cbdaa1 !important; /* verde aprobado */
+  color: #333;
+  text-decoration: line-through;
 }
